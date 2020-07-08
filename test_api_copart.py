@@ -1,3 +1,4 @@
+
 from requests_toolbelt.utils import formdata
 import requests
 import json
@@ -133,7 +134,7 @@ def test_challenge9():
     responsetext = '{"returnCode": 1,"data":{"query": {"query": ["toyota camry"]},"results": "totalElements":4234}}}'
 
     assert response.status_code == 200
-    #print("Assertion is complete")
+    print("Assertion is complete")
     jo = json.loads(response.text)
 
     print(jo['data']['results']['content'][1])
