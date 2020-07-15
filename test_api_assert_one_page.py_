@@ -47,10 +47,17 @@ page_1 = "{'lotYardSameAsKioskYard': False, 'lotNumberStr': '32744160', 'ln': 32
 
 print(type(data_1))
 print(type(page_1))
+print(data_1)
+print(page_1)
+
+data_1 =list(data_1)
+page_1=list(page_1)
 
 print(data_1)
 print(page_1)
+
 if data_1 != page_1:
     print("Assertion is failed")
 else:
     assert data_1 == page_1
+
