@@ -6,3 +6,14 @@ def visit_site(py):
 
 def test_contact_information(py,visit_site):
     field_name = py.getx("//input[@id='firstName']").type("Jack")
+    field_last_name = py.getx("//input[@name='lastName']").type("Black")
+    street_adress = py.getx("//input[@name='address']").type("1235 67 street ")
+    sity_field = py.getx("//input[@name='city']").type("Brooklyn")
+    state_dropbox= py.getx("//select[@name='state']").select("NY")
+    index_field = py.getx("//input[@name='zip']").type("11235")
+    email_field = py.getx("//input[@name='email']").type("jackblack@gmail.com")
+    phone_field_1 = py.getx("//input[@id='phone1']").type("347")
+    phone_field_2 = py.getx("//input[@id='phone2']").type("225")
+    phone_field_3 = py.getx("//input[@id='phone3']").type("5056")
+    best_way_to_contact_field = py.getx("//select[@name='bestWayToContact']").select("Phone")
+    refferd_by_field = py.getx("//input[@name='refferedBy']").type("Racoon")
