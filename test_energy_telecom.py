@@ -29,3 +29,15 @@ def test_contact_information(py,visit_site):
     numbers_of_phones_plan_field = py.getx("//select[@name='cellPhoneNumberOfPhones']").select("3")
     last_upgraded_phone = py.getx("//select[@name='cellPhoneLastUpgradeMonths']").select("6")
     im_interested_in_wireless_radio_button = py.webdriver.find_element_by_name("cellPhoneWirelessCard[]").click()
+
+    #. Local/Long Distances/International Service
+    current_provider_field_2 = py.getx("//select[@name='longDistCurrentProvider']").select("Verizon")
+    primary_phone_number_field_1 = py.getx("//select[@name='longDistCurrentProvider']").type("347")
+    primary_phone_number_field_2 = py.getx("//input[@id='longDistPhoneNumber2']").type("210")
+    primary_phone_number_field_3 = py.getx("//input[@id='longDistPhoneNumber3']").type("1540")
+    my_monthly_payment_field_2 = py.getx("//input[@name='longDistMonthlyBill']").type('150')
+    bundled_with_field = py.webdriver.find_element_by_name("longDistBundledWith").click()
+    total_bill_field = py.getx("//input[@name='longDistTotalBill']").type("165")
+    international_calls_field = py.webdriver.find_element_by_name("longDistInternCall").click()
+    long_distance_include = py.webdriver.find_element_by_name("longDist").click()
+    im_inrerested_in_international_calls =py.webdriver.find_element_by_name("longDistUnlimited").click()
