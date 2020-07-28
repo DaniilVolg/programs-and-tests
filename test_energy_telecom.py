@@ -41,3 +41,20 @@ def test_contact_information(py,visit_site):
     international_calls_field = py.webdriver.find_element_by_name("longDistInternCall").click()
     long_distance_include = py.webdriver.find_element_by_name("longDist").click()
     im_inrerested_in_international_calls =py.webdriver.find_element_by_name("longDistUnlimited").click()
+
+
+    #High Speed Internet Service
+    current_provider_field_3 = py.getx("//select[@name='internetCurrentProvider']").select("SBC")
+    my_monthly_payment_apromoxially_field = py.getx("//input[@name='internetMonthlyBill']").type("175")
+    type_of_service_name = py.webdriver.find_element_by_id("internetTypeOfService").click()
+    wireless_aircard = py.webdriver.find_element_by_id("internetWirelessAircard[]").click()
+    provider_field = py.webdriver.find_element_by_id("internetWirelessProvider").send_keys("Verizon")
+    bundled_with_field_2 = py.webdriver.find_element_by_name("internetBundledWith").click()
+
+    #TV Service
+    current_provider_field_4 = py.getx("//select[@name='tvCurrentProvider']").select("Comcast")
+    my_monthly_payment_field_3 = py.getx("//input[@name='tvMonthlyBill']").type("185")
+    bundled_with_field_3 = py.webdriver.find_element_by_name("tvBundledWith").click()
+    numbers_of_receives_field = py.getx("//select[@name='tvNumberOfReceivers']").select("3")
+    months_left_on_plan = py.getx("//select[@name='tvMonthsLeft']").select("Prepaid")
+    i_currently_have_dvr = py.webdriver.find_element_by_name("tvType[]").click()
